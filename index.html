@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="components">
+<head>
+    <meta charset="UTF-8">
+
+
+
+
+    <title>localStorageCacheFactory</title>
+</head>
+<body ng-controller="mainCtrl">
+
+
+<div>cash info:</div>
+<div>id: {{lsCacheInfo.id}}</div>
+<div>size: {{lsCacheInfo.size}}</div>
+
+<div>
+<input type="number" ng-model="count" /> <button ng-click="addItems(count)">Add</button>
+</div>
+
+<div>
+    <input type="number" ng-model="findKey" /> <button ng-click="getItem(findKey)">Get item</button>
+
+    <div ng-show="itemInfo">
+        item info:
+        <div>key: {{itemInfo.key}}</div>
+        <div>value: {{itemInfo.value}}</div>
+    </div>
+</div>
+
+
+<script type="text/javascript" src="bower_components/angular/angular.js"></script>
+<script type="text/javascript" src="module.js"></script>
+<script type="text/javascript" src="localStorageCacheFactory.js"></script>
+
+</body>
+</html>
